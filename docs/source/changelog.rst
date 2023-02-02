@@ -7,6 +7,21 @@
 Changelog
 =========
 
+0.7.5
+-----
+
+- added a backport of the C++20 header for integer comparison
+
+0.7.4
+-----
+
+- check _HAS_STD_BYTE MSVC macro in xspan implementation
+
+0.7.3
+-----
+
+- Fixed line endings in xhalf_float_impl.hpp
+
 0.7.2
 -----
 
