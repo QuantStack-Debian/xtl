@@ -1,3 +1,9 @@
+xtl (0.7.5-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 23 Sep 2023 16:30:07 +0200
+
 xtl (0.7.5-1) experimental; urgency=medium
 
   * New upstream version. Closes: #1029992.
