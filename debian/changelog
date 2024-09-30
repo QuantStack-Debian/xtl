@@ -1,3 +1,9 @@
+xtl (0.7.7-1) unstable; urgency=medium
+
+  * New upstream release. Closes: #1082757.
+
+ -- Vincent Bernat <bernat@debian.org>  Mon, 30 Sep 2024 09:19:09 +0200
+
 xtl (0.7.5-3) unstable; urgency=medium
 
   * d/test: add missing xtl-dev dependency. Closes: #1052544.
