@@ -4,7 +4,7 @@ Maintainer: Debian QuantStack Team <team+debian-quantstack-team@tracker.debian.o
 Uploaders: Vincent Bernat <bernat@debian.org>
 Build-Depends: debhelper-compat (= 12),
                cmake,
-               libgtest-dev (>= 1.8.1)
+               libgtest-dev
 Standards-Version: 4.5.0
 Section: libs
 Homepage: https://github.com/xtensor-stack/xtl
