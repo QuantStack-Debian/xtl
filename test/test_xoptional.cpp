@@ -11,11 +11,11 @@
 #include "xtl/xoptional_sequence.hpp"
 
 #include <algorithm>
+#include <any>
 #include <sstream>
 #include <string>
 #include <vector>
 
-#include "xtl/xany.hpp"
 #include "test_common_macros.hpp"
 
 #ifdef HAVE_NLOHMANN_JSON
@@ -210,7 +210,6 @@ namespace xtl
         auto res8 = fma(o1, o2, o3);
         EXPECT_EQ(res8, std::fma(d1, d2, d3));
 
-        using optional_int = xoptional<int, bool>;
         using optional_int_ref = xoptional<int&, bool&>;
         int i1 = 9;
         int i2 = 4;
@@ -232,7 +231,7 @@ namespace xtl
 
         auto res13 = ~oi1;
         EXPECT_EQ(res13, optional(~i1, true));
-        
+
         auto res5 = oi1 || oi2;
         EXPECT_EQ(res5, optional(i1 || i2, true));
 
@@ -274,9 +273,9 @@ namespace xtl
         double d = 1.;
         bool f = true;
         opt_type o(d, f);
-        xtl::any a(o);
+        std::any a(o);
 
-        opt_type res = any_cast<opt_type>(a);
+        opt_type res = std::any_cast<opt_type>(a);
         EXPECT_EQ(res.value(), o.value());
         EXPECT_EQ(res.has_value(), o.has_value());
     }
@@ -297,7 +296,6 @@ namespace xtl
 
     TEST(xoptional, select)
     {
-        using opt_type = xoptional<double, bool>;
         using bool_opt_type = xoptional<bool, bool>;
         auto missing_val = missing<double>();
 
